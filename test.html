@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TreeView</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <ul id="myUL">
+        <li data-id="1"><span class="caret">Beverages</span>
+            <ul class="nested">
+                <li data-id="2">Water</li>
+                <li data-id="3">Coffee</li>
+                <li data-id="4"><span class="caret">Tea</span>
+                    <ul class="nested">
+                        <li data-id="5">Black Tea</li>
+                        <li data-id="6">White Tea</li>
+                        <li data-id="7"><span class="caret">Green Tea</span>
+                            <ul class="nested">
+                                <li data-id="8">Sencha</li>
+                                <li data-id="9">Gyokuro</li>
+                                <li data-id="10">Matcha</li>
+                                <li data-id="11">Pi Lo Chun</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <script src="test.js"></script>
+</body>
+
+</html>
