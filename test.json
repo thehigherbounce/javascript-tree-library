@@ -1,0 +1,58 @@
+[{
+    "id": 1,
+    "text": "Beverages",
+    "children": [
+        {
+            "id": 2,
+            "text": "Water",
+            "children": false
+        },
+        {
+            "id": 3,
+            "text": "Coffee",
+            "children": false
+        },
+        {
+            "id": 4,
+            "text": "Tea",
+            "children": [
+                {
+                    "id": 5,
+                    "text": "Black Tea",
+                    "children": false
+                },
+                {
+                    "id": 6,
+                    "text": "White Tea",
+                    "children": false
+                },
+                {
+                    "id": 7,
+                    "text": "Green Tea",
+                    "children": [
+                        {
+                            "id": 8,
+                            "text": "Sencha",
+                            "children": false
+                        },
+                        {
+                            "id": 9,
+                            "text": "Gyokuro",
+                            "children": false
+                        },
+                        {
+                            "id": 10,
+                            "text": "Matcha",
+                            "children": false
+                        },
+                        {
+                            "id": 11,
+                            "text": "Pi Lo Chun",
+                            "children": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}]
