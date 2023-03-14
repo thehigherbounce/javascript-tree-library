@@ -3,29 +3,11 @@
         let treeState;
 
         const saveStateOfTree = function () { // save tree list into cookie
-            console.log(treeState)
             sessionStorage.setItem("openIds", treeState.join(','));
-            // const d = new Date();
-            // d.setTime(d.getTime() + 15 * 60 * 1000);
-            // let expires = "expires=" + d.toUTCString();
-            // document.cookie = "openIds=" + treeState.join(',') + ';' + expires + ';path=/';
         }
         const getStateOfTree = function () {
             let state = sessionStorage.getItem("openIds");
             return !state ? [] : state.split(',');
-            // let decodedCookie = decodeURIComponent(document.cookie);
-            // let ca = decodedCookie.split(';');
-            // let name = "openIds=";
-            // for (let i = 0; i < ca.length; i++) {
-            //     let c = ca[i];
-            //     while (c.charAt(0) == ' ') {
-            //         c = c.substring(1);
-            //     }
-            //     if (c.indexOf("openIds=") == 0) {
-            //         return c.substring(name.length, c.length).split(',');
-            //     }
-            // }
-            // return [];
         }
         
         const itemClick = function () { // when the user click treelist, capture list id and save it into cookie data
@@ -34,7 +16,6 @@
             if (this.classList.contains("caret-down")) {
                 treeState.push(this.parentElement.getAttribute('data-id'))
             } else {
-                console.log(treeState)
                 treeState = treeState.filter((item) => item != this.parentElement.getAttribute('data-id'));
             }
             saveStateOfTree();
@@ -57,8 +38,6 @@
                 toggler[i].addEventListener("click", itemClick);
             }
         }
-
-
         return {
             init: function () {
                 treeState = getStateOfTree(); // temp data for tree state
